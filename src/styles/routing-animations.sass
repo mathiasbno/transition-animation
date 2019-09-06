@@ -1,0 +1,92 @@
+@import 'styles/animations.sass'
+
+.enter
+  &.frontPage
+    position: absolute
+
+    .imageWrapper
+      .image
+        animation: .3s imageFullscreen cubic-bezier(.47,.12,.52,1.13) .1s reverse forwards
+        border-radius: 0
+        height: 680px
+        transform: translate(-40px, -81px)
+        width: 375px
+
+    .icon
+      animation: .2s fadeOut .4s ease-in reverse forwards, .2s scaleDown .4s reverse ease-in forwards
+      opacity: 0
+      transform: scale(.5)
+
+    .title,
+    .paragraph
+      animation: .2s fadeOut ease-in reverse forwards
+      animation-delay: .2s
+      opacity: 0
+
+  &.article
+    position: absolute
+
+    .title,
+    .author
+      opacity: 1
+      position: relative
+
+    .title
+      animation: .6s textBounce .2s cubic-bezier(.47,1.73,.58,.82) forwards, .8s fadeIn ease-in forwards
+
+    .author
+      animation: .5s textSlideUp .3s cubic-bezier(.47,1.73,.58,.82) forwards, .5s fadeIn .3s ease-in-out forwards
+
+    .comment
+      animation: .5s textSlideRight .3s cubic-bezier(.47,1.73,.58,.82) forwards, .5s fadeIn .3s ease-in-out forwards
+
+    .close
+      animation: .3s fadeIn .3s ease-in forwards
+
+    &.enter-active
+      .title,
+      .author,
+      .close,
+      .image,
+      .comment
+        opacity: 0
+
+      .author
+        transform: translateY(30px)
+
+      .comment
+        transform: translateX(30px)
+
+.exit
+  &.frontPage
+    .title,
+    .icon,
+    .paragraph
+      animation: .2s fadeOut ease-in forwards
+
+    .paragraph
+      animation-delay: .1s
+
+    .icon
+      animation: .2s fadeOut .2s ease-in forwards, .2s scaleDown .2s ease-in forwards
+
+    .imageWrapper
+      .image
+        animation: .3s imageFullscreen cubic-bezier(.93,.18,.59,.73) forwards, .2s imageBounce .3s ease-out forwards
+
+    &.exit-active
+      position: absolute
+      top: 0
+
+  &.article
+    .image
+      opacity: 0
+
+    .title,
+    .close,
+    .author,
+    .comment
+      animation: .2s fadeOut ease-in forwards
+
+    .author
+      animation-delay: .1s

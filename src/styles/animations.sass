@@ -1,0 +1,71 @@
+@keyframes fadeOut
+  from
+    opacity: 1
+    transform: translateY(0px)
+
+  to
+    opacity: 0
+    transform: translateY(15px)
+
+@keyframes fadeIn
+  from
+    opacity: 0
+
+  to
+    opacity: 1
+
+@keyframes textSlideUp
+  from
+    transform: translateY(30px)
+
+  to
+    transform: translateY(0px)
+
+@keyframes textSlideRight
+  from
+    transform: translateX(30px)
+
+  to
+    transform: translateX(0px)
+
+@keyframes scaleDown
+  from
+    transform: scale(1)
+
+  to
+    transform: scale(0.5)
+
+@keyframes imageFullscreen
+  0%
+    border-radius: 5px
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2)
+    height: 100%
+    width: 100%
+    transform: translate(0px, 0px)
+
+  100%
+    border-radius: 0
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.2)
+    height: 680px
+    width: 375px
+    transform: translate(-40px, -81px)
+
+@keyframes imageBounce
+  0%
+    background-size: 100%
+
+  60%
+    background-size: 102%
+
+  100%
+    background-size: 100%
+
+@keyframes textBounce
+  0%
+    transform: translateY(-10px)
+
+  30%
+    transform: translateY(-20px)
+
+  100%
+    transform: translateY(0)
